@@ -82,6 +82,11 @@ public class itemInputScreen extends AppCompatActivity {
                         output = output.concat("Item: " + itemArray.get(i).getItemName()
                                 + " | Price: $" + itemArray.get(i).getItemPrice() +
                                 " | Count: " + itemArray.get(i).getnumItems() + "\n");
+
+                        itemNameInput.setText("");
+                        countItemsInput.setText("");
+                        itemPriceInput.setText("");
+                        priorityInput.setText("");
                     }
 
                 itemsList.setText(output);
@@ -103,7 +108,7 @@ public class itemInputScreen extends AppCompatActivity {
                                 + " | Price: $" + itemArray.get(i).getItemPrice() +
                                 " | Count: " + itemArray.get(i).getNumItemsPurchased() + "\n");
                     }
-                 output = output.concat("You Purchased:" + "\n");
+                 output = output.concat("\nYou Purchased:" + "\n");
 
                 for(int i =0; i < itemArray.size(); i++){
                     if(itemArray.get(i).getPurchased()) {

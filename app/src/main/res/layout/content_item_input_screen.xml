@@ -8,6 +8,21 @@
     tools:context=".itemInputScreen"
     tools:showIn="@layout/activity_item_input_screen">
 
+    <TextView
+        android:id="@+id/itemListView"
+        android:layout_width="0dp"
+        android:layout_height="315dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="center"
+        android:text="Your shopping list will appear here..."
+        android:textAlignment="gravity"
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/itemNameInput"
         android:layout_width="0dp"
@@ -35,7 +50,6 @@
         android:ems="10"
         android:hint="Count"
         android:inputType="number"
-        android:maxLength="2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/itemNameInput" />
 
@@ -60,19 +74,20 @@
         android:layout_marginTop="32dp"
         android:ems="10"
         android:hint="Priority"
-        android:inputType="numberDecimal"
+        android:inputType="number"
         app:layout_constraintStart_toEndOf="@+id/priceInput"
         app:layout_constraintTop_toBottomOf="@+id/itemNameInput" />
 
     <Button
         android:id="@+id/addItemButton"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="32dp"
         android:text="Add Item"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/priorityInput"
         app:layout_constraintTop_toBottomOf="@+id/itemNameInput" />
 
@@ -81,24 +96,12 @@
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="Go Shopping"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/priceInput" />
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/itemListView"
-        android:layout_width="0dp"
-        android:layout_height="315dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
 </android.support.constraint.ConstraintLayout>
