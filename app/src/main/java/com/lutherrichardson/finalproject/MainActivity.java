@@ -33,14 +33,27 @@ public class MainActivity extends AppCompatActivity {
     budgetInput = findViewById(R.id.budgetInput);
 
 
+
+
+
     View.OnClickListener listener = new View.OnClickListener() {
         @Override
         public void onClick(View v){
+
+
             // on click, update the textview
-            String newText = nameInput.getText().toString();
-            user.setNameOfUser(nameInput.getText().toString());
-            user.setBankAccount(Double.parseDouble(budgetInput.getText().toString()));
-            startShopping(user.getNameOfUser(), user.getBankAccount());
+            String newName = nameInput.getText().toString();
+            String newBudget = budgetInput.getText().toString();
+
+            // catch a no input button press
+            if(newName.equals("") || newBudget.equals("")){
+                submitButton.animate();
+            }
+            else {
+                user.setNameOfUser(newName);
+                user.setBankAccount(Double.parseDouble(newBudget));
+                startShopping(user.getNameOfUser(), user.getBankAccount());
+            }
         }
     };
     submitButton.setOnClickListener(listener);

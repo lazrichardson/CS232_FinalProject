@@ -71,6 +71,9 @@ public class itemInputScreen extends AppCompatActivity {
                 String itemPrice = itemPriceInput.getText().toString();
                 String itemPriority = priorityInput.getText().toString();
 
+
+
+
                 // initialize the objects
                     itemArray.add(itemCounter, new Item());
 
