@@ -1,6 +1,7 @@
 package com.lutherrichardson.finalproject;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,8 +21,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // create the user
-       final User user = new User();
+        setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+    // create the user
+    final User user = new User();
 
     // assign the views from the layout file to the corresponding vars
     submitButton = findViewById(R.id.SubmitButton);
